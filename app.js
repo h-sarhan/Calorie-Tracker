@@ -133,6 +133,8 @@ function edit() {
 				"id"
 			);
 			page.change(new editState());
+			meal.value = foodItems[itemPosition].name;
+			calories.value = foodItems[itemPosition].calories;
 			document.querySelector("#update-meal").addEventListener("click", () => {
 				console.log("hi");
 				foodItems[itemPosition].name = meal.value;
@@ -143,6 +145,7 @@ function edit() {
 				updateList();
 			});
 			document.querySelector("#delete-meal").addEventListener("click", () => {
+				console.log("hi");
 				foodItems.splice(itemPosition, 1);
 				console.log("hi");
 				meal.value = "";
